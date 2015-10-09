@@ -22,5 +22,8 @@ module Scoreboard
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
+
+    # set the site name from the env variable
+    config.app_name = ENV['APP_NAME']
   end
 end

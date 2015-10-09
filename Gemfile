@@ -45,6 +45,9 @@ group :development do
   gem 'spring'
 end
 
+# store env variables in hidden .env file
+gem 'dotenv-rails', :groups => [:development, :test]
+
 # use Heroku stuff
 gem 'rails_12factor', group: :production
 ruby "2.2.0"

@@ -1,0 +1,1 @@
+<h1><%= Scoreboard::Application.config.app_name.upcase %></h1>
