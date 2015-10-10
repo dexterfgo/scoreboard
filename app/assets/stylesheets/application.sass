@@ -67,11 +67,20 @@ $desktop: new-breakpoint(min-width 1050px 12)
 div.container
   @include outer-container
   min-height: 2em
-  margin-bottom: 100%
 
 div.title
   @include fill-parent()
   text-align: center
+  @include media($mobile)
+    margin-bottom: 2em
+  @include media($tablet)
+    margin-bottom: 4em
+  @include media($desktop)
+    margin-bottom: 6em
+
 
 div.link-list
   text-align: center
+
+div.link-list-item
+  margin: 1em
