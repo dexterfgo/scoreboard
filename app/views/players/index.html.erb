@@ -1,11 +1,11 @@
 <div class="title">
-  <h2>users</h2>
+  <h2>players</h2>
 </div>
 
 <div class="link-list">
-  <% @users.each do |user| %>
+  <% @players.each do |player| %>
   <div class="link-list-item" %>
-    <%= link_to user.name, user %>
+    <%= link_to player.name, player %>
   </div>
   <% end %>
 </div>
