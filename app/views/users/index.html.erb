@@ -1,0 +1,12 @@
+<div class="title">
+  <h2>users</h2>
+</div>
+
+<div class="link-list">
+  <% @users.each do |user| %>
+  <div class="link-list-item" %>
+    <%= link_to user.name, user %>
+  </div>
+  <% end %>
+</div>
+

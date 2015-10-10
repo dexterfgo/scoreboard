@@ -51,6 +51,12 @@ h5
 h6
   font-size: 1.1em
   
+a
+  text-decoration: none
+  color: #3073d1
+  @include transition(color 0.1s ease)
+  &:hover
+    color: #5498f7
 
 //sizing
 $mobile: new-breakpoint(min-width 0 4)
@@ -65,6 +71,7 @@ div.container
 
 div.title
   @include fill-parent()
-  > h1
-    text-align: center
+  text-align: center
 
+div.link-list
+  text-align: center

@@ -52,6 +52,8 @@ end
 gem 'bourbon'
 gem 'neat'
 
+gem 'simple_form'
+
 # store env variables in hidden .env file
 gem 'dotenv-rails', :groups => [:development, :test]
 
