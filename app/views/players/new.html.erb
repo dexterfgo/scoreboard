@@ -4,5 +4,7 @@
 
 <%= simple_form_for :player, url: players_path do |f| %>
   <%= f.input :name %>
-  <%= f.submit 'save' %>
+  <div class="center buttoncontainer">
+    <%= f.button :button, 'save', type: "submit",  class: "button center" %>
+  </div>
 <% end %>

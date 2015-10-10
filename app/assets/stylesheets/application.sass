@@ -1,4 +1,12 @@
 @import "bourbon"
+@import "neat-helpers"
+//sizing
+$mobile: new-breakpoint(min-width 0 4)
+$tablet: new-breakpoint(min-width 760px 8)
+$desktop: new-breakpoint(min-width 1050px 12)
+
+// $visual-grid: true
+
 @import "neat"
 @import "home"
 
@@ -10,8 +18,8 @@ body
   background-color: white
   position: relative
 
-html, body
-  min-height: 100%
+// html, body
+  // min-height: 100%
 
 //clearfix
 %clearfix
@@ -21,10 +29,18 @@ html, body
     clear: both
 
 //typography
+$link-color: #3073d1
+$hover-color: #5498f7
+
 body
   font: 100%
   font-family: 'Montserrat', sans-serif
   font-weight: 400
+  padding: 0em 2em
+
+button, input
+  font: 100%
+  font-family: 'Montserrat', sans-serif
 
 p, h1, h2, h3, h4, h5, h6, ul, ol
   text-align: inherit
@@ -53,23 +69,34 @@ h6
   
 a
   text-decoration: none
-  color: #3073d1
+  color: $link-color
   @include transition(color 0.1s ease)
   &:hover
-    color: #5498f7
+    color: $hover-color
 
-//sizing
-$mobile: new-breakpoint(min-width 0 4)
-$tablet: new-breakpoint(min-width 760px 8)
-$desktop: new-breakpoint(min-width 1050px 12)
+.button
+  color: #fff
+  display: inline-block
+  padding: 1em 2em
+  background-color: $link-color
+  border: 0px
+  border-radius: 1em
+  font-size: 1em
+  @include transition(background-color 0.1s ease)
+  &:hover
+    background-color: $hover-color
+    color: #fff
 
+.center
+  text-align: center
 
 div.container
   @include outer-container
   min-height: 2em
+  padding-bottom: 2em
 
 div.title
-  @include fill-parent()
+  @include fill-parent
   text-align: center
   @include media($mobile)
     margin-bottom: 2em
@@ -84,3 +111,45 @@ div.link-list
 
 div.link-list-item
   margin: 1em
+
+form
+  @include fill-parent
+
+form > div.input
+  @include row()
+  margin: 1em 0em
+  > label
+    text-align: right
+    padding: 1em 0
+    @include media($mobile)
+      @include span-columns(1 of 3)
+    @include media($tablet)
+      @include span-columns(2 of 9)
+      @include shift(2)
+    @include media($desktop)
+      @include span-columns(1 of 9)
+      @include shift(3)
+  > input
+    @include media($mobile)
+      @include span-columns(2 of 3)
+    @include media($tablet)
+      @include span-columns(2 of 9)
+    @include media($desktop)
+      @include span-columns(2 of 9)
+    @include omega
+  > input[type="text"]
+    font-size: 1em
+    padding: 0.9em 0.5em
+    border: none
+    border-bottom: solid 0.1em #c9c9c9
+    border-top: solid 0.1em #c9c9c9
+    @include transition(border-bottom 0.1s ease)
+    @include transition(border-top 0.1s ease)
+    &:focus
+      border-bottom: solid 0.1em #969696
+      border-top: solid 0.1em #969696
+      outline: none
+
+form > div.buttoncontainer
+  margin-top: 3em
+  
