@@ -48,6 +48,10 @@ group :development do
   gem 'spring'
 end
 
+# use Bourbon and Neat for sass and design
+gem 'bourbon'
+gem 'neat'
+
 # store env variables in hidden .env file
 gem 'dotenv-rails', :groups => [:development, :test]
 

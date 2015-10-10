@@ -1,0 +1,70 @@
+@import "bourbon"
+@import "neat"
+@import "home"
+
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700)
+
+body
+  -webkit-text-size-adjust: 100%
+  margin: 0
+  background-color: white
+  position: relative
+
+html, body
+  min-height: 100%
+
+//clearfix
+%clearfix
+  &:after
+    content: ""
+    display: table
+    clear: both
+
+//typography
+body
+  font: 100%
+  font-family: 'Montserrat', sans-serif
+  font-weight: 400
+
+p, h1, h2, h3, h4, h5, h6, ul, ol
+  text-align: inherit
+
+h1
+  font-weight: 700
+  font-size: 2em
+
+h2, h3, h4, h5, h6
+  font-weight: 400
+
+h2
+  font-size: 1.6em
+
+h3
+  font-size: 1.4em
+
+h4
+  font-size: 1.3em
+
+h5
+  font-size: 1.2em
+
+h6
+  font-size: 1.1em
+  
+
+//sizing
+$mobile: new-breakpoint(min-width 0 4)
+$tablet: new-breakpoint(min-width 760px 8)
+$desktop: new-breakpoint(min-width 1050px 12)
+
+
+div.container
+  @include outer-container
+  min-height: 2em
+  margin-bottom: 100%
+
+div.title
+  @include fill-parent()
+  > h1
+    text-align: center
+
