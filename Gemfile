@@ -49,8 +49,9 @@ group :development do
 end
 
 # use Bourbon and Neat for sass and design
-gem 'bourbon'
-gem 'neat'
+#gem 'bourbon'
+#gem 'neat'
+gem 'foundation-rails'
 
 gem 'simple_form'
 
