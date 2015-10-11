@@ -1,0 +1,5 @@
+<div class="title">
+  <h2>edit player</h2>
+</div>
+
+<%= render partial: 'form', locals: {player: @player, target: player_path(@player), method: :patch} %>

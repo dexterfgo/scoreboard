@@ -2,9 +2,4 @@
   <h2>new player</h2>
 </div>
 
-<%= simple_form_for :player, url: players_path do |f| %>
-  <%= f.input :name %>
-  <div class="center form-button-container">
-    <%= f.button :button, 'save', type: "submit",  class: "button round" %>
-  </div>
-<% end %>
+<%= render partial: 'form', locals: {player: @player, target: players_path, method: :post} %>
