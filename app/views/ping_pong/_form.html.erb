@@ -5,11 +5,15 @@
     <% end %>
   <% end %>
 
-  <%= f.input :date %>
+  <%= f.input :date, as: 'date' %>
   <%= f.input :player_one_id, collection: players %>
+  <%= f.input :player_one_score, label: 'score' %>
+  <%= f.input :player_two_id, collection: players %>
+  <%= f.input :player_two_score, label: 'score' %>
 
   <div class="center form-button-container">
     <%= f.button :button, 'save', type: "submit", class: "button round" %>
-    <%= link_to 'cancel', target, class: "button round" %>
+    <%= link_to 'cancel', cancel, class: "button round" %>
   </div>
+
 <% end %>

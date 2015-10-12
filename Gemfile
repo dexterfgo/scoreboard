@@ -52,6 +52,7 @@ end
 #gem 'bourbon'
 #gem 'neat'
 gem 'foundation-rails', '= 5.5.2.1'
+gem 'foundation-datetimepicker-rails'
 
 gem 'simple_form'
 
