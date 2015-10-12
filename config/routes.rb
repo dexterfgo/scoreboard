@@ -9,4 +9,9 @@ Rails.application.routes.draw do
 
   resources :players, except: :destroy
 
+  # ping pong routes
+  get 'ping_pong', to: 'ping_pong#home'
+  get 'ping_pong/games', to: 'ping_pong#index_games'
+  get 'ping_pong/games/new', to: 'ping_pong#new_game', as: 'new_ping_pong_game'
+
 end

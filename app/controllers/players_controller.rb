@@ -16,7 +16,7 @@ class PlayersController < ApplicationController
     @player = Player.new(player_params)
 
     if @player.save
-      redirect_to :index
+      redirect_to players_path
     else
       render :new
     end

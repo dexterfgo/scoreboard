@@ -1,0 +1,15 @@
+<%= simple_form_for :ping_pong_game, url: target, method: method do |f| %>
+  <% if ping_pong_game.errors.any? %>
+    <% ping_pong_game.errors.full_messages.each do |msg| %>
+      <p><%= msg %></p>
+    <% end %>
+  <% end %>
+
+  <%= f.input :date %>
+  <%= f.input :player_one_id, collection: players %>
+
+  <div class="center form-button-container">
+    <%= f.button :button, 'save', type: "submit", class: "button round" %>
+    <%= link_to 'cancel', target, class: "button round" %>
+  </div>
+<% end %>

@@ -5,8 +5,7 @@
     <% end %>
   <% end %>
 
-  <%= f.error :name %>
-  <%= f.input :name %>
+  <%= f.input :name, autofocus: true  %>
   <div class="center form-button-container">
     <%= f.button :button, 'save', type: "submit", class: "button round" %>
     <%= link_to 'cancel', target, class: "button round" %>
