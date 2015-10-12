@@ -8,7 +8,9 @@
     <div class="ping_pong_game_date"><em><%= g.date.to_formatted_s(:rfc822) %></em></div>
     <div class="ping_pong_player_one_name"><span><%= g.player_one.name %></span></div>
     <div class="ping_pong_score">
-      <span><%= g.player_one_score %> - <%= g.player_two_score %></span>
+      <div class="player_one_score"><span><%= g.player_one_score %></span></div>
+      <div class="score_hyphen"><span>-</span></div>
+      <div class="player_one_score"><span><%= g.player_two_score %></span></div>
     </div>
     <div class="ping_pong_player_two_name"><span><%= g.player_two.name %></span></div>
   </div>
