@@ -2,7 +2,27 @@
   <h2>ping pong</h2>
 </div>
 
+<div class="list">
+  <div class="list_item center">
+    <h4>power rankings</h4>
+  </div>
+
+  <% @power_ranks.each do |player_name, rank| %>
+  <div class="list_item center">
+    <div class="power_ranking_name">
+      <span><%= player_name %></span>
+    </div>
+    <div class="power_ranking">
+      <span><%= rank %></span>
+    </div>
+  </div>
+  <% end %>
+</div>
+
 <div id="ping_pong_game_list">
+  <div class="ping_pong_game_list_item center">
+    <h4>recent games</h4>
+  </div>
 <% @ping_pong_games.each do |g| %>
   <div class="ping_pong_game_list_item" id="ping_pong_game_<%= g.id %>">
     <div class="ping_pong_game_date"><em><%= g.date.to_formatted_s(:rfc822) %></em></div>
